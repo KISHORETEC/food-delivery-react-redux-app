@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=RocknRoll+One&display=swap');
 
+:root {
+  --primary-color: #212245;
+  --secondary-color: #df2020;
+  --third-color: #fde4e4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +27,7 @@ h6 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: unset;
 }
 
