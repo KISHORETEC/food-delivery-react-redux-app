@@ -1,7 +1,8 @@
 @import '../index.css';
 
 .footer {
-  padding: 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 30px;
   background: var(--third-color);
 }
 
@@ -22,6 +23,12 @@
   line-height: 28px;
 }
 
+.footer__title {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .delivery__time-item {
   background: transparent !important;
 }
@@ -30,4 +37,53 @@
   font-weight: 600;
   font-size: 1rem;
   color: var(--primary-color);
+}
+
+.delivery__time-item p {
+  color: var(--primary-color);
+}
+
+.newsletter {
+  padding: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.newsletter input:focus {
+  outline: none;
+}
+
+.newsletter span {
+  background: var(--secondary-color);
+  padding: 5px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter span i {
+  color: #fff;
+}
+
+.newsletter input::placeholder {
+  color: var(--primary-color);
+}
+
+.social__links span i {
+  padding: 5px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.copyright__text {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
 }
