@@ -1,0 +1,66 @@
+@import '../index.css';
+.feature__subtitle {
+  color: var(--secondary-color);
+}
+
+.feature__title span {
+  color: var(--secondary-color);
+}
+
+.feature__text {
+  color: #777;
+}
+
+.feature__item p {
+  color: #777;
+}
+
+.food__category {
+  background: var(--secondary-color);
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0px;
+  border-radius: 8px;
+}
+
+.food__category button {
+  border: none;
+  outline: none;
+  padding: 7px 20px;
+  background: transparent;
+  color: #fff;
+}
+
+.food__category button img {
+  width: 20px;
+  height: 20px;
+}
+
+.foodBtnActive {
+  background: #fff !important;
+  border-radius: 5px;
+  color: var(--secondary-color) !important;
+}
+
+.foodie-title span {
+  color: var(--secondary-color);
+}
+
+.foodie-desc {
+  color: #777;
+  line-height: 28px;
+}
+
+.choose__us-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.choose__us-title i {
+  font-weight: 500 !important;
+  color: var(--secondary-color);
+}
+
+.choose__us-desc {
+  color: #777;
+}
