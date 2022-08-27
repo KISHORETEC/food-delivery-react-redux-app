@@ -39,3 +39,22 @@
   border-radius: 5px;
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width: 1199px) {
+  .product__content h5 a {
+    font-size: 0.8rem;
+  }
+
+  .addToCart__btn {
+    padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+
+  .product__item {
+    padding: 20px;
+  }
+  .addToCart__btn {
+    padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+}

@@ -15,6 +15,8 @@ import foodCategoryImg02 from '../assets/images/pizza.png';
 import foodCategoryImg03 from '../assets/images/bread.png';
 import ProductCard from '../components/UI/product-card/ProductCard.jsx';
 import whyImg from '../assets/images/location.png';
+import networkImg from '../assets/images/network.png';
+import TestimonialSlider from '../components/UI/slider/TestimonialSlider.jsx';
 
 const featureData = [
   {
@@ -36,7 +38,13 @@ const featureData = [
 const Home = () => {
   const [category, setCategory] = useState('ALL');
   const [allProducts, setAllProducts] = useState(products);
+  const [hotPizza, setHotPizza] = useState([]);
 
+  useEffect(() => {
+    const filteredPizza = products.filter((item) => item.category === 'Pizza');
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
   useEffect(() => {
     if (category === 'ALL') {
       setAllProducts(products);
@@ -139,7 +147,7 @@ const Home = () => {
 
             {featureData.map((item, index) => {
               return (
-                <Col lg='4' md='4' key={index} className='mt-5'>
+                <Col lg='4' md='6' sm='6' key={index} className='mt-5'>
                   <div className='feature__item text-center px-5 py-3'>
                     <img
                       className='w-25 mb-3'
@@ -204,7 +212,7 @@ const Home = () => {
 
             {allProducts.map((item) => {
               return (
-                <Col lg='3' md='4' key={item.id} className='mt-5'>
+                <Col lg='3' md='4' sm='6' xs='6' key={item.id} className='mt-5'>
                   <ProductCard item={item} />
                 </Col>
               );
@@ -213,7 +221,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section>
+      <section className='why__choose-us'>
         <Container>
           <Row>
             <Col lg='6' md='6'>
@@ -224,13 +232,13 @@ const Home = () => {
                 <h2 className='foodie-title mb-4'>
                   Why <span>Foodie?</span>
                 </h2>
-                <p>
+                <p className='foodie-desc'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   laborum ratione maiores? Commodi quam nostrum recusandae! Quod
                   ducimus non molestias, numquam labore quidem nam illum esse
                   harum vitae laborum? Error!
                 </p>
-                <ListGroup className='mt-5'>
+                <ListGroup className='mt-4'>
                   <ListGroupItem className='border-0 ps-0'>
                     <p className='choose__us-title d-flex align-items-center gap-2'>
                       <i className='ri-checkbox-circle-line'></i>Fresh and Tasty
@@ -267,11 +275,41 @@ const Home = () => {
         </Container>
       </section>
 
-      <section>
+      <section className='pt-0'>
         <Container>
           <Row>
             <Col lg='12' className='text-center mb-5'>
               <h2>Hot Pizza</h2>
+            </Col>
+
+            {hotPizza.map((item) => (
+              <Col lg='3' md='4' key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <Row>
+            <Col lg='6' md='6'>
+              <div className='testimonial'>
+                <h5 className='testimonial__subtitle mb-4'>Testimonial</h5>
+                <h2 className='testimonial__title mb-40'>
+                  What our <span>customers </span>are saying
+                </h2>
+                <p className='testimonial__desc'>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dolor accusantium magni omnis culpa cupiditate nesciunt amet,
+                  fugit nam doloremque rem.
+                </p>
+                <TestimonialSlider />
+              </div>
+            </Col>
+            <Col lg='6' md='6'>
+              <img src={networkImg} alt='testimonial-img' className='w-100' />
             </Col>
           </Row>
         </Container>
