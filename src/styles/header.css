@@ -83,6 +83,7 @@
   position: sticky;
   top: 0;
   left: 0;
+  background: #fff;
   box-shadow: 5px 5px 15px -5px var(--third-color);
 }
 
