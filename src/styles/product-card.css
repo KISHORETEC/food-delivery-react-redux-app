@@ -38,6 +38,11 @@
   color: #fff;
   border-radius: 5px;
   font-size: 0.9rem;
+  transition: 0.4s;
+}
+
+.addToCart__btn:hover {
+  background: var(--primary-color);
 }
 
 @media only screen and (max-width: 1199px) {

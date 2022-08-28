@@ -3,7 +3,9 @@ import { Container } from 'reactstrap';
 import logo from '../../assets/images/res-logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import '../../styles/header.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { cartUiActions } from '../../store/shopping-cart/cartUISlice';
+
 const nav__links = [
   {
     display: 'Home',
@@ -26,8 +28,11 @@ const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  console.log(menuRef);
+  const dispatch = useDispatch();
   const toggleMenu = () => menuRef.current.classList.toggle('show__menu');
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
+  };
   useEffect(() => {
     document.addEventListener('scroll', () => {
       if (
@@ -68,7 +73,7 @@ const Header = () => {
           </div>
           {/* ======= nav right icons ======= */}
           <div className='nav__right d-flex align-items-center gap-4'>
-            <span className='cart__icon'>
+            <span className='cart__icon' onClick={toggleCart}>
               <i className='ri-shopping-basket-line' />
               <span className='cart__badge'>{totalQuantity}</span>
             </span>
