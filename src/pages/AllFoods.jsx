@@ -23,7 +23,7 @@ const AllFoods = () => {
     visitedPage + productPerPage
   );
 
-  const pageCount = Math.ceil(products.length / productPerPage);
+  const pageCount = Math.ceil(searchedProduct.length / productPerPage);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
