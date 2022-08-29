@@ -1,0 +1,17 @@
+@import '../index.css';
+
+.search__widget,
+.sorting__widget select {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--third-color);
+  cursor: pointer;
+}
+
+.search__widget input {
+  border: none;
+}
+.search__widget input:focus,
+.sorting__widget select:focus {
+  outline: none;
+}
