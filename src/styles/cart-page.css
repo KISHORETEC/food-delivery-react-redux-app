@@ -21,9 +21,11 @@ td {
   cursor: pointer;
 }
 
-.cart__page-btn a {
+.cart__page-btn a,
+.cart__page-btn a:hover {
   color: #fff;
 }
+
 .cart__subtotal {
   color: var(--secondary-color);
   font-size: 1.2rem;
