@@ -15,3 +15,19 @@
 .sorting__widget select:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .search__widget {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .search__widget input {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .sorting__widget select {
+    color: #777;
+    width: 100% !important;
+    font-size: 0.8rem;
+  }
+}
