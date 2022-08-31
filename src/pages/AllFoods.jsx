@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CommonSection from '../components/UI/common-section/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
@@ -11,10 +11,13 @@ import '../styles/pagination.css';
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [pageNumber, setPageNumber] = useState(0);
+  // eslint-disable-next-line array-callback-return
   const searchedProduct = products.filter((item) => {
-    if (searchTerm.value === '') return item;
-    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    if (searchTerm.value === '') {
       return item;
+    } else if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return item;
+    }
   });
   const productPerPage = 8;
   const visitedPage = pageNumber * productPerPage;
