@@ -34,4 +34,5 @@ On your command line, navigate to root folder and install: npm install
 . ReactJS <br />
 . Redux Toolkit <br />
 . Bootstrap, Reactstrap <br />
-. CSS
+. CSS <br />
+. React Route
